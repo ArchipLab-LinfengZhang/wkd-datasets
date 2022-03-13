@@ -36,15 +36,14 @@ for unpaired dataset. You can find more details about these datasets from [here.
 
 ## Codes
 Our codes can be found in the supplementary material in CVPR website. Besides, we also provides the main implementation codes of wavelet transformation here.
+Please download the *pytorch_wavelets* from [here.](https://github.com/fbcotter/pytorch_wavelets).
 
 ```
 from pytorch_wavelets import DWTForward, DWTInverse
 
-class YourI2ITModel():
+class WKD(wkd_level=4, wkd_basis='haar'):
     def __init__(self):
-        ...
-        self.xfm = DWTForward(J=DWT_Level, mode='zero',wave=DWT_Basis).cuda()
-        ...
+        self.xfm = DWTForward(J=wkd_level mode='zero',wave=wkd_basis)
     
     def get_wavelet_loss(self, student, teacher):
             student_l, student_h = self.xfm(student)
@@ -54,4 +53,3 @@ class YourI2ITModel():
                 loss+= torch.nn.functional.l1_loss(teacher_h[index], student_h[index])
             return loss
 ```
-Please download the pytorch_wavelets from [here.](https://github.com/fbcotter/pytorch_wavelets).
