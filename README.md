@@ -40,6 +40,7 @@ Please download the *pytorch_wavelets* from [here.](https://github.com/fbcotter/
 
 ```
 from pytorch_wavelets import DWTForward, DWTInverse
+import torch
 
 class WKD(wkd_level=4, wkd_basis='haar'):
     def __init__(self):
