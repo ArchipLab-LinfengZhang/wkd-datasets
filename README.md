@@ -61,7 +61,7 @@ Now you can re-implement our experiments by
 ```
 sh run.sh
 ```
-Our teacher model can be downloaded from [here]().
+Our teacher model can be downloaded from [here](https://drive.google.com/file/d/1Bax6bR7kq65_fGtz7g0njhL1aU9trARG/view?usp=sharing).
 
 Note that our codes are modified based on this [repo.](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix). Please download the datasets based on their README.
 
